@@ -25,6 +25,6 @@ TestingInputBox
     clear element text    ${"email_txt"}
     sleep    3
 
-    close    Browser
+    close browser
 
 *** Keywords ***
