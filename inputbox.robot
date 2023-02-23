@@ -16,7 +16,8 @@ TestingInputBox
     ${"email_txt"}    set variable    id:Email
 
     element should be visible    ${"email_txt"}
-    comment    element should not be disabled    ${"email_txt"}
+    #element should not be visible    ${"email_txt"}
+    #element should not be disabled    ${"email_txt"}
     element should be enabled    ${"email_txt"}
     
     input text    ${"email_txt"}    JohnDavid@gmail.com
