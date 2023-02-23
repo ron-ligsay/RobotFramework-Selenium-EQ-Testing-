@@ -1,18 +1,22 @@
 *** Settings ***
-Library           SeleniumLibrary
+Library         SeleniumLibrary
 
 
 *** Test Cases ***
 RegTest
-    
-    ${speed}=       get selenium speed
-    log to console   ${speed}
     open browser    http://www.demowebshop.tricentis.com/register   chrome
     maximize browser window
+   
+    ${time}=    get selenium timeout
+    log to console   ${time}    
 
+    set selenium timeout    10 seconds
+    wait until page contains    Registration        # 5 secs default now 10 secs
+
+        ${time}=    get selenium timeout
+    log to console   ${time}    
 
     select radio button  Gender M
-    
     input text    name:FirstName    John
     input text    name:LastName     David
     input text    name:Email    anc@gmail.com
