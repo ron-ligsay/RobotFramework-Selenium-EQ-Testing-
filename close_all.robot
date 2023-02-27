@@ -10,4 +10,4 @@ MyTestCase
     maximize browser window
 
     #close browser
-    close all browser
+    close all browsers
