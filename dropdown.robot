@@ -19,3 +19,7 @@ Handling Dropdown and Lists
 
     # Select list by value
     #select from list by value    continents    value
+
+    # list box
+    select from list by label    selenium_commands    Switch Commands
+    select from list by label    selenium_commands    WebElement Commands
