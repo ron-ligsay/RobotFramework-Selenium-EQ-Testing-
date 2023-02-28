@@ -1,19 +1,11 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../Resources/resource.robot
 
 
 *** Variables ***
 ${url}      http://demowebshop.tricentis.com/
 ${browser}  chrome
 
-*** Test Cases ***
-TC1
-    ${PageTitle}=   launchBrowserMod   ${url}    ${browser}
-    #launchBrowser   ${url}    ${browser}
-    #launchBrowserSecond   
-    input text  id:Email        email
-    input text  id:Password     pasword
 
 
 *** Keywords ***
