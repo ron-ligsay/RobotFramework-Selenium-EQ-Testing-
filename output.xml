@@ -1,94 +1,348 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.8.5 on win32)" generated="20230223 10:59:25.022" rpa="false" schemaversion="3">
-<suite id="s1" name="Inputbox" source="C:\Users\aky\Documents\Programs\Robot\inputbox.robot">
-<test id="s1-t1" name="TestingInputBox" line="10">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230223 10:59:25.353" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
-<status status="PASS" starttime="20230223 10:59:25.352" endtime="20230223 10:59:28.591"/>
+<robot generator="Robot 6.0.2 (Python 3.8.5 on win32)" generated="20230301 10:22:35.648" rpa="false" schemaversion="3">
+<suite id="s1" name="For Loop" source="C:\Users\aky\Documents\Programs\Robot\for_loop.robot">
+<test id="s1-t1" name="ForLoop1" line="3">
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>10</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.683" endtime="20230301 10:22:35.685"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230223 10:59:28.591" endtime="20230223 10:59:28.850"/>
+<status status="PASS" starttime="20230301 10:22:35.683" endtime="20230301 10:22:35.686"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.687" endtime="20230301 10:22:35.688"/>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>nopCommerce demo store</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230223 10:59:28.895" level="INFO">Page title is 'nopCommerce demo store'.</msg>
-<status status="PASS" starttime="20230223 10:59:28.866" endtime="20230223 10:59:28.895"/>
+<status status="PASS" starttime="20230301 10:22:35.686" endtime="20230301 10:22:35.688"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.688" endtime="20230301 10:22:35.689"/>
 </kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230223 10:59:28.912" level="INFO">Clicking link 'xpath:/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a'.</msg>
-<status status="PASS" starttime="20230223 10:59:28.908" endtime="20230223 10:59:29.952"/>
+<status status="PASS" starttime="20230301 10:22:35.688" endtime="20230301 10:22:35.690"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.690" endtime="20230301 10:22:35.691"/>
 </kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${"email_txt"}</var>
-<arg>id:Email</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230223 10:59:29.957" level="INFO">${"email_txt"} = id:Email</msg>
-<status status="PASS" starttime="20230223 10:59:29.952" endtime="20230223 10:59:29.957"/>
+<status status="PASS" starttime="20230301 10:22:35.690" endtime="20230301 10:22:35.691"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.692" endtime="20230301 10:22:35.693"/>
 </kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 10:59:30.035" level="INFO">Element 'id:Email' is displayed.</msg>
-<status status="PASS" starttime="20230223 10:59:29.958" endtime="20230223 10:59:30.035"/>
+<status status="PASS" starttime="20230301 10:22:35.692" endtime="20230301 10:22:35.693"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.694" endtime="20230301 10:22:35.695"/>
 </kw>
-<kw name="Comment" library="BuiltIn">
-<arg>element should not be disabled</arg>
-<arg>${"email_txt"}</arg>
-<doc>Displays the given messages in the log file as keyword arguments.</doc>
-<status status="PASS" starttime="20230223 10:59:30.036" endtime="20230223 10:59:30.036"/>
+<status status="PASS" starttime="20230301 10:22:35.693" endtime="20230301 10:22:35.695"/>
+</iter>
+<iter>
+<var name="${i}">7</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.695" endtime="20230301 10:22:35.696"/>
 </kw>
-<kw name="Element Should Be Enabled" library="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20230223 10:59:30.036" endtime="20230223 10:59:30.080"/>
+<status status="PASS" starttime="20230301 10:22:35.695" endtime="20230301 10:22:35.696"/>
+</iter>
+<iter>
+<var name="${i}">8</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.698" endtime="20230301 10:22:35.709"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<arg>JohnDavid@gmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230223 10:59:30.081" level="INFO">Typing text 'JohnDavid@gmail.com' into text field 'id:Email'.</msg>
-<status status="PASS" starttime="20230223 10:59:30.080" endtime="20230223 10:59:30.214"/>
+<status status="PASS" starttime="20230301 10:22:35.696" endtime="20230301 10:22:35.710"/>
+</iter>
+<iter>
+<var name="${i}">9</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.711" endtime="20230301 10:22:35.713"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 10:59:35.222" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230223 10:59:30.215" endtime="20230223 10:59:35.222"/>
-</kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20230223 10:59:35.222" endtime="20230223 10:59:35.274"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 10:59:38.284" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230223 10:59:35.274" endtime="20230223 10:59:38.284"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230223 10:59:38.284" endtime="20230223 10:59:40.792"/>
-</kw>
-<status status="PASS" starttime="20230223 10:59:25.351" endtime="20230223 10:59:40.792"/>
+<status status="PASS" starttime="20230301 10:22:35.710" endtime="20230301 10:22:35.713"/>
+</iter>
+<status status="PASS" starttime="20230301 10:22:35.683" endtime="20230301 10:22:35.713"/>
+</for>
+<status status="PASS" starttime="20230301 10:22:35.682" endtime="20230301 10:22:35.714"/>
 </test>
-<status status="PASS" starttime="20230223 10:59:25.022" endtime="20230223 10:59:40.798"/>
+<test id="s1-t2" name="ForLoop2" line="9">
+<for flavor="IN">
+<var>${i}</var>
+<value>1</value>
+<value>2</value>
+<value>3</value>
+<value>4</value>
+<value>5</value>
+<value>6</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.719" endtime="20230301 10:22:35.721"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.719" endtime="20230301 10:22:35.722"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.724" endtime="20230301 10:22:35.726"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.723" endtime="20230301 10:22:35.726"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.727" endtime="20230301 10:22:35.730"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.727" endtime="20230301 10:22:35.731"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.739" endtime="20230301 10:22:35.743"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.738" endtime="20230301 10:22:35.743"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.743" endtime="20230301 10:22:35.744"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.743" endtime="20230301 10:22:35.745"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.745" endtime="20230301 10:22:35.746"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.745" endtime="20230301 10:22:35.747"/>
+</iter>
+<status status="PASS" starttime="20230301 10:22:35.718" endtime="20230301 10:22:35.747"/>
+</for>
+<status status="PASS" starttime="20230301 10:22:35.716" endtime="20230301 10:22:35.747"/>
+</test>
+<test id="s1-t3" name="ForLoop3withList" line="14">
+<kw name="Create List" library="BuiltIn">
+<var>${list}</var>
+<arg>1</arg>
+<arg>2</arg>
+<arg>3</arg>
+<arg>4</arg>
+<arg>5</arg>
+<arg>6</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230301 10:22:35.750" level="INFO">${list} = ['1', '2', '3', '4', '5', '6']</msg>
+<status status="PASS" starttime="20230301 10:22:35.750" endtime="20230301 10:22:35.750"/>
+</kw>
+<for flavor="IN">
+<var>${i}</var>
+<value>@{list}</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.755" endtime="20230301 10:22:35.758"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.754" endtime="20230301 10:22:35.759"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.759" endtime="20230301 10:22:35.760"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.759" endtime="20230301 10:22:35.760"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.760" endtime="20230301 10:22:35.761"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.760" endtime="20230301 10:22:35.761"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.762" endtime="20230301 10:22:35.762"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.761" endtime="20230301 10:22:35.762"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.763" endtime="20230301 10:22:35.764"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.762" endtime="20230301 10:22:35.764"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.765" endtime="20230301 10:22:35.765"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.765" endtime="20230301 10:22:35.765"/>
+</iter>
+<status status="PASS" starttime="20230301 10:22:35.754" endtime="20230301 10:22:35.766"/>
+</for>
+<status status="PASS" starttime="20230301 10:22:35.749" endtime="20230301 10:22:35.766"/>
+</test>
+<test id="s1-t4" name="ForLoop4" line="20">
+<for flavor="IN">
+<var>${name}</var>
+<value>john</value>
+<value>david</value>
+<value>smith</value>
+<value>scott</value>
+<iter>
+<var name="${name}">john</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.775" endtime="20230301 10:22:35.778"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.775" endtime="20230301 10:22:35.778"/>
+</iter>
+<iter>
+<var name="${name}">david</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.779" endtime="20230301 10:22:35.781"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.779" endtime="20230301 10:22:35.781"/>
+</iter>
+<iter>
+<var name="${name}">smith</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.782" endtime="20230301 10:22:35.783"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.782" endtime="20230301 10:22:35.783"/>
+</iter>
+<iter>
+<var name="${name}">scott</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.783" endtime="20230301 10:22:35.787"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.783" endtime="20230301 10:22:35.788"/>
+</iter>
+<status status="PASS" starttime="20230301 10:22:35.775" endtime="20230301 10:22:35.790"/>
+</for>
+<status status="PASS" starttime="20230301 10:22:35.773" endtime="20230301 10:22:35.792"/>
+</test>
+<test id="s1-t5" name="ForLoop5" line="26">
+<kw name="Create List" library="BuiltIn">
+<var>@{namelist}</var>
+<arg>john</arg>
+<arg>david</arg>
+<arg>smith</arg>
+<arg>scott</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230301 10:22:35.795" level="INFO">@{namelist} = [ john | david | smith | scott ]</msg>
+<status status="PASS" starttime="20230301 10:22:35.795" endtime="20230301 10:22:35.796"/>
+</kw>
+<for flavor="IN">
+<var>${name}</var>
+<value>@{namelist}</value>
+<iter>
+<var name="${name}">john</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.797" endtime="20230301 10:22:35.798"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.797" endtime="20230301 10:22:35.798"/>
+</iter>
+<iter>
+<var name="${name}">david</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.798" endtime="20230301 10:22:35.799"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.798" endtime="20230301 10:22:35.799"/>
+</iter>
+<iter>
+<var name="${name}">smith</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.800" endtime="20230301 10:22:35.806"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.799" endtime="20230301 10:22:35.806"/>
+</iter>
+<iter>
+<var name="${name}">scott</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230301 10:22:35.807" endtime="20230301 10:22:35.810"/>
+</kw>
+<status status="PASS" starttime="20230301 10:22:35.806" endtime="20230301 10:22:35.810"/>
+</iter>
+<status status="PASS" starttime="20230301 10:22:35.796" endtime="20230301 10:22:35.810"/>
+</for>
+<status status="PASS" starttime="20230301 10:22:35.794" endtime="20230301 10:22:35.811"/>
+</test>
+<status status="PASS" starttime="20230301 10:22:35.651" endtime="20230301 10:22:35.815"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Inputbox">Inputbox</stat>
+<stat pass="5" fail="0" skip="0" id="s1" name="For Loop">For Loop</stat>
 </suite>
 </statistics>
 <errors>
