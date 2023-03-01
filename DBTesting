@@ -1,0 +1,52 @@
+*** Settings ***
+Library     DatabaseLibrary
+Library     OperatingSystem
+
+Suite Setup    Connect to Database      pymysql     ${DBName}   ${DBUIser}   ${DBPass}   ${DBHost}  ${DBPort}
+Suite Teardown  Disconnect From Database
+
+*** Variables ***
+${DBName}   mydb
+${DBUIser}   root
+${DBPass}   root
+${DBHost}   127.0.0.1
+${DBPort}   3306
+
+*** Test Cases ***
+Create person table
+    ${output}=  execute sql string    Create table person(id integer, first_name varchar(20), last_name varchar(20));
+    log to console  ${output}
+    should be equal as strings  ${output}   None
+
+Inserting Data in person Table
+    #Single Record
+    #${output}=  execute sql string    Insert into person values(101, "John","candy");
+
+    #Multiple Record
+    ${output}=  execute sql script    ./TestData/mydb_person_insertData.sql
+
+    log to console  ${output}
+    should be equal as strings  ${output}   None
+
+Check If Existing in Table
+    check if exists in database    select id from mydb.person where first_name="Jeio";
+
+Check cell record not present in person table
+    check if not exists in database    select id from mydb.person where first_name="David";
+
+Check person tbale exists in mydb database
+    table must exist    person
+
+Verify row cound is zero
+    row count is 0    select * from mydbperson where first_namwe = 'xyz';
+
+Verify row cound is some value
+    row count is equal to x    select * from mydbperson where first_namwe = 'David';    1
+
+Verify row count is greater than x
+    row count is greater than x    select * from mydbperson where first_namwe = 'xyz';  0
+
+Retrieve Records from person table
+    @{queryresutlss}=   query    Select * from mydb.person;
+    log to console  many    @{queryResults}
+
